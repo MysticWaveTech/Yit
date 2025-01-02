@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Focus Aid: Pulsating Circle</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #1f2937; /* Deep background for relaxation */
+      color: #d1d5db; /* Soft text for clarity */
+      font-family: Arial, sans-serif;
+      overflow: hidden;
+    }
+
+    .focus-container {
+      text-align: center;
+    }
+
+    .pulse-circle {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background-color: #60a5fa; /* Calm blue */
+      animation: pulseAnimation 4s ease-in-out infinite;
+    }
+
+    .instructions {
+      margin-top: 20px;
+    }
+
+    h1 {
+      font-size: 1.8rem;
+      margin: 0;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin: 0;
+    }
+
+    @keyframes pulseAnimation {
+      0%, 100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.2);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="focus-container">
+    <div class="pulse-circle"></div>
+    <div class="instructions">
+      <h1>Focus on the Circle</h1>
+      <p>Follow the gentle pulse of the circle. Let your attention remain steady.</p>
+    </div>
+  </div>
+</body>
+</html>

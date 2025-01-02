@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Focus Aid: Color Gradient Shift</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #0f172a; /* Dark background for focus */
+      color: #e5e7eb; /* Soft, readable text color */
+      font-family: Arial, sans-serif;
+      overflow: hidden;
+    }
+
+    .focus-container {
+      text-align: center;
+    }
+
+    .gradient-background {
+      width: 100vw;
+      height: 100vh;
+      background: linear-gradient(45deg, #3b82f6, #9333ea, #3b82f6);
+      background-size: 400% 400%;
+      animation: gradientShift 6s ease infinite;
+    }
+
+    .instructions {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 1.5rem;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    @keyframes gradientShift {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="focus-container">
+    <div class="gradient-background"></div>
+    <div class="instructions">
+      <h1>Focus on the Shifting Colors</h1>
+      <p>Let your attention follow the smooth transition of colors. Stay grounded in the flow.</p>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Focus Aid: Rotating Triangle</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #1e3a8a, #0f172a); /* Gradient for depth */
+      font-family: Arial, sans-serif;
+      color: #e0f2fe;
+      overflow: hidden;
+    }
+
+    .focus-container {
+      text-align: center;
+    }
+
+    .triangle-container {
+      position: relative;
+      width: 200px;
+      height: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation: rotate 6s linear infinite;
+    }
+
+    .triangle {
+      width: 0;
+      height: 0;
+      border-left: 100px solid transparent;
+      border-right: 100px solid transparent;
+      border-bottom: 173.2px solid #38bdf8; /* Soothing blue */
+    }
+
+    .instructions {
+      margin-top: 20px;
+    }
+
+    h1 {
+      font-size: 1.8rem;
+      margin: 0;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin: 0;
+    }
+
+    @keyframes rotate {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="focus-container">
+    <div class="triangle-container">
+      <div class="triangle"></div>
+    </div>
+    <div class="instructions">
+      <h1>Focus on the Triangle</h1>
+      <p>Let your mind follow its rotation. Stay present.</p>
+    </div>
+  </div>
+</body>
+</html>

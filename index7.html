@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Focus Aid: Expanding Circles</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #111827; /* Deep background for focus */
+      color: #e2e8f0; /* Light text for readability */
+      font-family: Arial, sans-serif;
+      overflow: hidden;
+    }
+
+    .focus-container {
+      text-align: center;
+    }
+
+    .circle-container {
+      position: relative;
+      width: 300px;
+      height: 300px;
+    }
+
+    .circle {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border: 2px solid #3b82f6; /* Calming blue outline */
+      border-radius: 50%;
+      animation: expandContract 4s ease-in-out infinite;
+    }
+
+    .circle:nth-child(2) {
+      animation-delay: 1s;
+    }
+
+    .circle:nth-child(3) {
+      animation-delay: 2s;
+    }
+
+    .circle:nth-child(4) {
+      animation-delay: 3s;
+    }
+
+    .instructions {
+      margin-top: 20px;
+    }
+
+    h1 {
+      font-size: 1.8rem;
+      margin: 0;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin: 0;
+    }
+
+    @keyframes expandContract {
+      0%, 100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.5);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="focus-container">
+    <div class="circle-container">
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+    </div>
+    <div class="instructions">
+      <h1>Focus on the Expanding Circles</h1>
+      <p>Let your attention flow with the rhythm of the circles as they grow and shrink.</p>
+    </div>
+  </div>
+</body>
+</html>

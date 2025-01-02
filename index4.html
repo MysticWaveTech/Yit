@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Focus Aid: Rotating Spiral</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #1e293b; /* Dark background for contrast */
+      color: #e2e8f0; /* Light text for readability */
+      font-family: Arial, sans-serif;
+      overflow: hidden;
+    }
+
+    .focus-container {
+      text-align: center;
+    }
+
+    .spiral {
+      width: 200px;
+      height: 200px;
+      position: relative;
+      border-radius: 50%;
+      background: conic-gradient(#38bdf8, #a5b4fc, #3b82f6, #38bdf8); /* Gradient spiral */
+      animation: rotateSpiral 6s linear infinite;
+    }
+
+    .instructions {
+      margin-top: 20px;
+    }
+
+    h1 {
+      font-size: 1.8rem;
+      margin: 0;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin: 0;
+    }
+
+    @keyframes rotateSpiral {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="focus-container">
+    <div class="spiral"></div>
+    <div class="instructions">
+      <h1>Focus on the Spiral</h1>
+      <p>Let your gaze follow the spiral as it rotates. Stay in the moment.</p>
+    </div>
+  </div>
+</body>
+</html>
