@@ -14,11 +14,11 @@
       background-image: url('Gemini_Generated_Image_7e8yj27e8yj27e8y.jpeg');
       margin: 0;
       padding: 0;
-      display: flex;
+      
       justify-content: center;
       align-items: center;
       height: 100vh;
-      flex-direction: column;
+      
       background-size: contain; /* Ensures the image is scaled to fit the container */
     background-repeat: no-repeat; /* Prevents repeating the image */
     background-position: center center; /* Centers the image */
@@ -59,14 +59,13 @@
       font-size: 2rem;
       text-align: center;
       margin-bottom: 20px;
-      color: red; /* Light teal for the header */
-    }
+        }
 
 p {
     
     color: #234567;
-    font-size: 14px;
-    background-color: lightblue;
+    font-size: 20px;
+    background-color: white;
     
 }
 
@@ -85,6 +84,7 @@ p {
       color: #ffffff;
       font-weight: bold;
       transition: color 0.3s, background-color 0.3s;
+      
     }
 
     .links a:nth-child(1) {
@@ -133,24 +133,50 @@ p {
     }
     
     
+% {
+        top: 10%;
+        left: 90%;
+    }
+}
 
-.glowing-text {
-    position: absolute;
-    font-size: 48px;
+.glowing-text.random-position {
+    animation: randomPosition 5s infinite alternate;
+}
+
+/* Ensure links or other interactive elements are clickable */
+a {
+    position: relative;
+    z-index: 1; /* Place links above the glowing text */
     color: white;
+    text-decoration: none;
+}
+
+
+body {
+    margin: 0;
+    background-color: black;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    font-size: 50px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    animation: glowAnimation 3s infinite alternate;
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 0, 0, 0.7), 0 0 30px rgba(0, 0, 255, 0.7);
-    pointer-events: none; /* Prevent interaction with the text */
+    pointer-events: auto; /* Ensure interaction with the text if needed */
 }
 
-@keyframes glowing {
-    0% { text-shadow: 0 0 5px rgba(255, 255, 255, 0.5), 0 0 10px rgba(255, 0, 0, 0.7), 0 0 15px rgba(0, 0, 255, 0.7); }
-    50% { text-shadow: 0 0 20px rgba(255, 255, 255, 0.7), 0 0 30px rgba(255, 0, 0, 1), 0 0 40px rgba(0, 0, 255, 1); }
-    100% { text-shadow: 0 0 5px rgba(255, 255, 255, 0.5), 0 0 10px rgba(255, 0, 0, 0.7), 0 0 15px rgba(0, 0, 255, 0.7); }
+@keyframes glowAnimation {
+    0% {
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 0, 0, 0.7), 0 0 30px rgba(0, 0, 255, 0.7);
+    }
+    100% {
+        text-shadow: 0 0 20px rgba(255, 255, 255, 1), 0 0 40px rgba(255, 0, 0, 1), 0 0 60px rgba(0, 0, 255, 1);
+    }
 }
 
-.glowing-text {
-    animation: glowing 1.5s ease-in-out infinite alternate;
-}
     
   </style>
 </head>
@@ -178,29 +204,7 @@ p {
   
   <script>
       
-      function createRandomGlowText() {
-    const textElement = document.createElement('div');
-    
-
-    const randomX = Math.random() * window.innerWidth;
-    const randomY = Math.random() * window.innerHeight;
-    const randomSize = (Math.random() * 50) + 30; // Random size between 30px and 80px
-
-    textElement.style.left = `${randomX}px`;
-    textElement.style.top = `${randomY}px`;
-    textElement.style.fontSize = `${randomSize}px`;
-
-    document.body.appendChild(textElement);
-
-    // Remove the element after 4 seconds
-    setTimeout(() => {
-        textElement.remove();
-    }, 4000);
-}
-
-// Create random glowing text every 0.5 to 2 seconds
-setInterval(createRandomGlowText, Math.random() * 1500 + 500);
-      
+     
   </script>
   
   </div>
