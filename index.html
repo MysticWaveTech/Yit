@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Focus Aid</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #0d1117; /* Dark, calming background */
+      color: #c9d1d9; /* Soft text color for readability */
+      font-family: Arial, sans-serif;
+    }
+
+    .focus-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .focus-circle {
+      width: 150px;
+      height: 150px;
+      background-color: #58a6ff; /* Soothing blue */
+      border-radius: 50%;
+      position: relative;
+      animation: pulse 4s infinite;
+      box-shadow: 0 0 30px rgba(88, 166, 255, 0.7);
+    }
+
+    .pulse {
+      width: 100%;
+      height: 100%;
+      background-color: rgba(88, 166, 255, 0.4);
+      border-radius: 50%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      animation: expand 4s infinite;
+    }
+
+    .instructions {
+      margin-top: 20px;
+    }
+
+    h1 {
+      font-size: 1.8rem;
+      margin: 0;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin: 0;
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.2);
+      }
+    }
+
+    @keyframes expand {
+      0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+      50% {
+        transform: scale(1.5);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="focus-container">
+    <div class="focus-circle">
+      <div class="pulse"></div>
+    </div>
+    <div class="instructions">
+      <h1>Focus on the Center</h1>
+      <p>Breathe in as the circle expands, and breathe out as it contracts.</p>
+    </div>
+  </div>
+</body>
+</html>
